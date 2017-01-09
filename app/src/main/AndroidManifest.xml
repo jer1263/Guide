@@ -15,6 +15,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".activity.ListOrganeActivity"
+            android:label="@string/title_activity_organe" />
+        <activity
+            android:name=".activity.DetailOrganeActivity"
+            android:label="@string/title_activity_detail_organe"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

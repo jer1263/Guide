@@ -12,13 +12,13 @@ import java.util.List;
 
 import techmed.guide.R;
 import techmed.guide.activity.ListOrganeActivity;
-import techmed.guide.model.ItemPrincipal;
+import techmed.guide.model.Organe;
 
 /**
  * Created by Jerome on 05/01/2017.
  */
-public class RecyclerViewItemPrincipalAdapter extends RecyclerView.Adapter<RecyclerViewItemPrincipalAdapter.ViewHolder>{
-    private List<ItemPrincipal> items;
+public class RecyclerViewOrganeAdapter extends RecyclerView.Adapter<RecyclerViewOrganeAdapter.ViewHolder> {
+    private List<Organe> items;
     private Context context;
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
@@ -31,14 +31,14 @@ public class RecyclerViewItemPrincipalAdapter extends RecyclerView.Adapter<Recyc
 
     }
 
-    public RecyclerViewItemPrincipalAdapter(Context context, List<ItemPrincipal> items) {
+    public RecyclerViewOrganeAdapter(Context context, List<Organe> items) {
         this.context = context;
         this.items = items;
     }
 
 
     @Override
-    public RecyclerViewItemPrincipalAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public RecyclerViewOrganeAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
         View v = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.item_recyclerview_mainactivity, parent, false);
@@ -50,8 +50,9 @@ public class RecyclerViewItemPrincipalAdapter extends RecyclerView.Adapter<Recyc
                 context.startActivity(intent);
             }
         });
-        return new ViewHolder(v);
+        return new RecyclerViewOrganeAdapter.ViewHolder(v);
     }
+
 
     @Override
     public void onAttachedToRecyclerView(RecyclerView recyclerView) {
@@ -59,8 +60,9 @@ public class RecyclerViewItemPrincipalAdapter extends RecyclerView.Adapter<Recyc
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
+    public void onBindViewHolder(RecyclerViewOrganeAdapter.ViewHolder holder, int position) {
         holder.name.setText(items.get(position).getName());
+
     }
 
     @Override
@@ -68,6 +70,3 @@ public class RecyclerViewItemPrincipalAdapter extends RecyclerView.Adapter<Recyc
         return items.size();
     }
 }
-
-
-

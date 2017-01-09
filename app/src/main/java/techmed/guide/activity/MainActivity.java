@@ -1,13 +1,13 @@
 package techmed.guide.activity;
 
-import android.app.Fragment;
-import android.app.ListFragment;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 
 import techmed.guide.R;
 import techmed.guide.adapter.RecyclerViewItemPrincipalAdapter;
+import techmed.guide.fragment.ListMainFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,8 +20,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Fragment fragment = new ListFragment();
-        getFragmentManager().beginTransaction()
+        Fragment fragment = new ListMainFragment();
+        getSupportFragmentManager().beginTransaction()
                 .add(R.id.mainActivityContainer, fragment)
                 .commit();
 

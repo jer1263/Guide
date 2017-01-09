@@ -16,13 +16,13 @@ import techmed.guide.data.Generator;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class ListFragment extends Fragment {
+public class ListMainFragment extends Fragment {
 
 
     private RecyclerView recyclerView;
     private RecyclerViewItemPrincipalAdapter adapter;
 
-    public ListFragment() {
+    public ListMainFragment() {
         // Required empty public constructor
     }
 
@@ -35,10 +35,10 @@ public class ListFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_list, container, false);
         recyclerView = (RecyclerView)view.findViewById(R.id.recyclerviewMainActivity);
         recyclerView.setHasFixedSize(true);
-        LinearLayoutManager llm = new LinearLayoutManager(getActivity());
+        LinearLayoutManager llm = new LinearLayoutManager(getActivity().getApplicationContext());
         recyclerView.setLayoutManager(llm);
 
-        adapter = new RecyclerViewItemPrincipalAdapter(Generator.itemPrincipaux());
+        adapter = new RecyclerViewItemPrincipalAdapter(getActivity(), Generator.itemPrincipaux());
         recyclerView.setAdapter(adapter);
 
         return view;
