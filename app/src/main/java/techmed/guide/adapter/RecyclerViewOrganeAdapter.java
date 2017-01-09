@@ -11,6 +11,7 @@ import android.widget.TextView;
 import java.util.List;
 
 import techmed.guide.R;
+import techmed.guide.activity.DetailOrganeActivity;
 import techmed.guide.activity.ListOrganeActivity;
 import techmed.guide.model.Organe;
 
@@ -43,13 +44,6 @@ public class RecyclerViewOrganeAdapter extends RecyclerView.Adapter<RecyclerView
         View v = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.item_recyclerview_mainactivity, parent, false);
 
-        v.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(context, ListOrganeActivity.class);
-                context.startActivity(intent);
-            }
-        });
         return new RecyclerViewOrganeAdapter.ViewHolder(v);
     }
 
@@ -62,6 +56,14 @@ public class RecyclerViewOrganeAdapter extends RecyclerView.Adapter<RecyclerView
     @Override
     public void onBindViewHolder(RecyclerViewOrganeAdapter.ViewHolder holder, int position) {
         holder.name.setText(items.get(position).getName());
+
+            holder.itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(context, DetailOrganeActivity.class);
+                    context.startActivity(intent);
+                }
+            });
 
     }
 

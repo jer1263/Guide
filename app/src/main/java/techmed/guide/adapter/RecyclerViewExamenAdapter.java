@@ -17,7 +17,7 @@ import techmed.guide.model.ItemPrincipal;
 /**
  * Created by Jerome on 05/01/2017.
  */
-public class RecyclerViewItemPrincipalAdapter extends RecyclerView.Adapter<RecyclerViewItemPrincipalAdapter.ViewHolder>{
+public class RecyclerViewExamenAdapter extends RecyclerView.Adapter<RecyclerViewExamenAdapter.ViewHolder>{
     private List<ItemPrincipal> items;
     private Context context;
 
@@ -31,14 +31,14 @@ public class RecyclerViewItemPrincipalAdapter extends RecyclerView.Adapter<Recyc
 
     }
 
-    public RecyclerViewItemPrincipalAdapter(Context context, List<ItemPrincipal> items) {
+    public RecyclerViewExamenAdapter(Context context, List<ItemPrincipal> items) {
         this.context = context;
         this.items = items;
     }
 
 
     @Override
-    public RecyclerViewItemPrincipalAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public RecyclerViewExamenAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
         View v = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.item_recyclerview_mainactivity, parent, false);
