@@ -46,9 +46,9 @@ public class Generator {
 
     public static final List<Examen> listExamensFoie(){
         ArrayList<Examen> items = new ArrayList<>();
-        items.add(new Examen("Echographie", "Analyser l'ensemble de l'abdomen"));
-        items.add(new Examen("Tomodensitometrie", "Mesurer l'absorption des rayons X par les tissus pour reconstruire des images 2D ou 3D"));
-        items.add(new Examen("IRM", "Discriminer les differents tissus mous et obtenir un maximum de détails sur l'abdomen"));
+        items.add(new Examen("Echographie",R.drawable.echographie_abdominale ,"Analyser l'ensemble de l'abdomen"));
+        items.add(new Examen("Tomodensitometrie",R.drawable.tomodensitometrie_foie ,"Mesurer l'absorption des rayons X par les tissus pour reconstruire des images 2D ou 3D"));
+        items.add(new Examen("IRM",R.drawable.irm_foie ,"Discriminer les differents tissus mous et obtenir un maximum de détails sur l'abdomen"));
         return items;
     }
 
