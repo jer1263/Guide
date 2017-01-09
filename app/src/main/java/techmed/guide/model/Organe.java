@@ -1,12 +1,14 @@
 package techmed.guide.model;
 
+import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by Jerome on 05/01/2017.
  */
 
-public class Organe {
+public class Organe implements Serializable {
     private String name;
     private List<Examen> examens;
 
@@ -24,10 +26,11 @@ public class Organe {
 
     public Organe(String name) {
         this.name = name;
+        this.examens = new ArrayList<>();
     }
 
     public Organe(String name, List<Examen> examens) {
-        this.examens = examens;
         this.name = name;
+        this.examens = examens;
     }
 }

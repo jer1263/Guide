@@ -7,8 +7,10 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".activity.MainActivity">
+        android:theme="@style/AppTheme"
+        >
+        <activity android:name=".activity.MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,11 +19,16 @@
         </activity>
         <activity
             android:name=".activity.ListOrganeActivity"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_organe" />
         <activity
             android:name=".activity.DetailOrganeActivity"
-            android:label="@string/title_activity_detail_organe"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_detail_organe"/>
+        <activity
+            android:name=".activity.ExamenActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_examen"/>
     </application>
 
 </manifest>

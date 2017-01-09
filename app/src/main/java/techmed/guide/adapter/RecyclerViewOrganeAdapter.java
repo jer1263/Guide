@@ -12,7 +12,6 @@ import java.util.List;
 
 import techmed.guide.R;
 import techmed.guide.activity.DetailOrganeActivity;
-import techmed.guide.activity.ListOrganeActivity;
 import techmed.guide.model.Organe;
 
 /**
@@ -54,13 +53,14 @@ public class RecyclerViewOrganeAdapter extends RecyclerView.Adapter<RecyclerView
     }
 
     @Override
-    public void onBindViewHolder(RecyclerViewOrganeAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(RecyclerViewOrganeAdapter.ViewHolder holder, final int position) {
         holder.name.setText(items.get(position).getName());
 
             holder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(context, DetailOrganeActivity.class);
+                    intent.putExtra("organe", items.get(position));
                     context.startActivity(intent);
                 }
             });

@@ -1,12 +1,23 @@
 package techmed.guide.model;
 
+import java.io.Serializable;
+
 /**
  * Created by Jerome on 09/01/2017.
  */
 
-public class Examen {
+public class Examen implements Serializable {
     private String name;
     private String description;
+    private int imageId;
+
+    public int getImageId() {
+        return imageId;
+    }
+
+    public void setImageId(int imageId) {
+        this.imageId = imageId;
+    }
 
     public String getDescription() {
         return description;
@@ -26,6 +37,13 @@ public class Examen {
 
     public Examen(String name, String description) {
         this.name = name;
+        this.description = description;
+        this.imageId = 0;
+    }
+
+    public Examen(String name, int resId, String description) {
+        this.name = name;
+        this.imageId = resId;
         this.description = description;
     }
 }
