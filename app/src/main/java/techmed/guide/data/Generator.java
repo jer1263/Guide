@@ -47,6 +47,7 @@ public class Generator {
         ArrayList<Examen> items = new ArrayList<>();
         items.add(new Examen("Echographie abdominale", "Analyser l'ensemble de l'abdomen"));
         items.add(new Examen("IRM abdominale", "Discriminer les differents tissus mous et obtenir un maximum de détails sur l'abdomen"));
+        items.add(new Examen("Tomodensitométrie", ""));
         return items;
     }
 
@@ -57,8 +58,8 @@ public class Generator {
         items.add(new Examen("CT-scan", ""));
         items.add(new Examen("Tomographie à émission mono-photonique", ""));
         items.add(new Examen("Voxel-based morphometry", ""));
-        items.add(new Examen("Imagerie par résonance magnétique fonctionnelle", ""));
-        items.add(new Examen("Tomographie par émission de positrons", ""));
+        items.add(new Examen("Imagerie par résonance magnétique fonctionnelle", "Obtenir le taux d'oxygénation du sang dans le cerveau"));
+        items.add(new Examen("Tomographie par émission de positrons", "Mesurer les modifications du débit sanguin"));
         items.add(new Examen("Imagerie optique", ""));
         items.add(new Examen("Imagerie spectroscopique proche infrarouge", ""));
         items.add(new Examen("Mesure du signal optique évoqué ", ""));
