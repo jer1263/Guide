@@ -1,6 +1,7 @@
 package techmed.guide.data;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import techmed.guide.R;
@@ -26,8 +27,17 @@ public class Generator {
         items.add(new Organe("Cerveau", listExamensCerveau()));
         items.add(new Organe("Coeur", listExamensCoeur()));
         items.add(new Organe("Foie", listExamensFoie()));
-        items.add(new Organe("Poumons"));
-        items.add(new Organe("Reins"));
+        //items.add(new Organe("Poumons"));
+        //items.add(new Organe("Reins"));
+        return items;
+    }
+
+    public static final List<Examen> listExamens(){
+        ArrayList<Examen> items = new ArrayList<>();
+        items.addAll(listExamensCerveau());
+        items.addAll(listExamensCoeur());
+        items.addAll(listExamensFoie());
+        Collections.sort(items);
         return items;
     }
 

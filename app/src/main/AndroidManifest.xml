@@ -22,7 +22,7 @@
             android:screenOrientation="portrait"
             android:label="@string/title_activity_organe" />
         <activity
-            android:name=".activity.DetailOrganeActivity"
+            android:name=".activity.ListExamenActivity"
             android:screenOrientation="portrait"
             android:label="@string/title_activity_detail_organe"/>
         <activity

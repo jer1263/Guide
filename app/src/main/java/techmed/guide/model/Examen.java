@@ -6,7 +6,7 @@ import java.io.Serializable;
  * Created by Jerome on 09/01/2017.
  */
 
-public class Examen implements Serializable {
+public class Examen implements Serializable, Comparable<Examen> {
     private String name;
     private String description;
     private int imageId;
@@ -45,5 +45,10 @@ public class Examen implements Serializable {
         this.name = name;
         this.imageId = resId;
         this.description = description;
+    }
+
+    @Override
+    public int compareTo(Examen another) {
+        return this.name.compareTo(another.name);
     }
 }

@@ -10,7 +10,7 @@ import techmed.guide.R;
 import techmed.guide.fragment.ListExamenFragment;
 import techmed.guide.model.Organe;
 
-public class DetailOrganeActivity extends AppCompatActivity {
+public class ListExamenActivity extends AppCompatActivity {
 
     private Organe organe;
 

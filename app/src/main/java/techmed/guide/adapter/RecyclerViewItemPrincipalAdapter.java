@@ -11,8 +11,11 @@ import android.widget.TextView;
 import java.util.List;
 
 import techmed.guide.R;
+import techmed.guide.activity.ListExamenActivity;
 import techmed.guide.activity.ListOrganeActivity;
+import techmed.guide.data.Generator;
 import techmed.guide.model.ItemPrincipal;
+import techmed.guide.model.Organe;
 
 /**
  * Created by Jerome on 05/01/2017.
@@ -56,7 +59,14 @@ public class RecyclerViewItemPrincipalAdapter extends RecyclerView.Adapter<Recyc
     public void onBindViewHolder(ViewHolder holder, int position) {
         holder.name.setText(items.get(position).getName());
         if(position == 0){
-
+            holder.itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(context, ListExamenActivity.class);
+                    intent.putExtra("organe", new Organe("Examens", Generator.listExamens()));
+                    context.startActivity(intent);
+                }
+            });
         } else if(position == 1){
             holder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override

@@ -11,7 +11,7 @@ import android.widget.TextView;
 import java.util.List;
 
 import techmed.guide.R;
-import techmed.guide.activity.DetailOrganeActivity;
+import techmed.guide.activity.ListExamenActivity;
 import techmed.guide.model.Organe;
 
 /**
@@ -59,7 +59,7 @@ public class RecyclerViewOrganeAdapter extends RecyclerView.Adapter<RecyclerView
             holder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(context, DetailOrganeActivity.class);
+                    Intent intent = new Intent(context, ListExamenActivity.class);
                     intent.putExtra("organe", items.get(position));
                     context.startActivity(intent);
                 }

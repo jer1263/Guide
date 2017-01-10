@@ -38,7 +38,7 @@ public class ListExamenFragment extends Fragment {
         LinearLayoutManager llm = new LinearLayoutManager(getActivity().getApplicationContext());
         recyclerView.setLayoutManager(llm);
 
-        adapter = new RecyclerViewExamenAdapter(getActivity(), organe.getExamens());
+        adapter = new RecyclerViewExamenAdapter(getActivity(), organe);
         recyclerView.setAdapter(adapter);
 
         return view;

@@ -8,17 +8,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import java.util.List;
-
 import techmed.guide.R;
 import techmed.guide.activity.ExamenActivity;
-import techmed.guide.model.Examen;
+import techmed.guide.model.Organe;
 
 /**
  * Created by Jerome on 05/01/2017.
  */
 public class RecyclerViewExamenAdapter extends RecyclerView.Adapter<RecyclerViewExamenAdapter.ViewHolder>{
-    private List<Examen> items;
+    private Organe organe;
     private Context context;
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
@@ -28,13 +26,11 @@ public class RecyclerViewExamenAdapter extends RecyclerView.Adapter<RecyclerView
             name = (TextView)v.findViewById(R.id.item_name);
             shortDescription = (TextView)v.findViewById(R.id.item_subtitle);
         }
-
-
     }
 
-    public RecyclerViewExamenAdapter(Context context, List<Examen> items) {
+    public RecyclerViewExamenAdapter(Context context, Organe organe) {
         this.context = context;
-        this.items = items;
+        this.organe = organe;
     }
 
 
@@ -55,13 +51,14 @@ public class RecyclerViewExamenAdapter extends RecyclerView.Adapter<RecyclerView
 
     @Override
     public void onBindViewHolder(ViewHolder holder, final int position) {
-        holder.name.setText(items.get(holder.getAdapterPosition()).getName());
-        holder.shortDescription.setText(items.get(holder.getAdapterPosition()).getDescription());
+        holder.name.setText(organe.getExamens().get(holder.getAdapterPosition()).getName());
+        holder.shortDescription.setText(organe.getExamens().get(holder.getAdapterPosition()).getDescription());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(context, ExamenActivity.class);
-                    intent.putExtra("examen", items.get(position));
+                    intent.putExtra("examen", organe.getExamens().get(position));
+                    intent.putExtra("nom_organe", organe.getName());
                     context.startActivity(intent);
                 }
             });
@@ -71,7 +68,7 @@ public class RecyclerViewExamenAdapter extends RecyclerView.Adapter<RecyclerView
 
     @Override
     public int getItemCount() {
-        return items.size();
+        return organe.getExamens().size();
     }
 }
 

@@ -16,9 +16,10 @@ public class ExamenActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         examen = (Examen)getIntent().getExtras().getSerializable("examen");
+        String nom_organe = getIntent().getExtras().getString("nom_organe");
         setContentView(R.layout.activity_examen);
         if(examen!=null && getSupportActionBar()!=null){
-            getSupportActionBar().setTitle(examen.getName());
+            getSupportActionBar().setTitle(nom_organe+ " - "+examen.getName());
         }
 
         Fragment fragment = new ExamenFragment();
