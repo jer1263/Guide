@@ -66,8 +66,8 @@ public class Generator {
         ArrayList<Examen> items = new ArrayList<>();
         items.add(new Examen("IRM du cerveau", R.drawable.irm_cerveau,"Permet de visualiser la partie superficielle, la partie profonde les ventricules et la vascularisation veineuse et artérielle",""));
         items.add(new Examen("Tomodensitométrie", R.drawable.tomodensitometrie_cerveau,"Utilisée dans un contexte de traumatologie (recherche d'hématome sous-dural/extra-dural), d'hémorragie sous-arachnoïdienne ou intra-parenchymateuse",""));
-        items.add(new Examen("Imagerie par résonance magnétique fonctionnelle(IRMf)", R.drawable.IRMf_cerveau,"Obtenir le taux d'oxygénation du sang dans le cerveau",""));
-        items.add(new Examen("Tomographie par émission de positrons(TEP)", R.drawable.TEP_cerveau,"Mesurer les modifications du débit sanguin",""));
+        items.add(new Examen("Imagerie par résonance magnétique fonctionnelle(IRMf)", R.drawable.irmf_cerveau,"Obtenir le taux d'oxygénation du sang dans le cerveau",""));
+        items.add(new Examen("Tomographie par émission de positrons(TEP)", R.drawable.tep_cerveau,"Mesurer les modifications du débit sanguin",""));
         return items;
     }
 

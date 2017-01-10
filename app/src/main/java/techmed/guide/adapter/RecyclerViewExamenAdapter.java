@@ -52,7 +52,7 @@ public class RecyclerViewExamenAdapter extends RecyclerView.Adapter<RecyclerView
     @Override
     public void onBindViewHolder(ViewHolder holder, final int position) {
         holder.name.setText(organe.getExamens().get(holder.getAdapterPosition()).getName());
-        holder.shortDescription.setText(organe.getExamens().get(holder.getAdapterPosition()).getDescription());
+        holder.shortDescription.setText(organe.getExamens().get(holder.getAdapterPosition()).getSubtitle());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

@@ -26,8 +26,16 @@ public class ExamenFragment extends Fragment {
                              Bundle savedInstanceState) {
         examen = (Examen) getArguments().getSerializable("examen");
         View view = inflater.inflate(R.layout.fragment_examen, container, false);
+
         TextView description = (TextView)view.findViewById(R.id.textviewExamenFragment);
         description.setText(examen.getDescription());
+
+        TextView subtitle = (TextView)view.findViewById(R.id.textviewSubtitleExamenFragment);
+        subtitle.setText(examen.getSubtitle());
+
+        TextView title = (TextView)view.findViewById(R.id.textviewTitleExamenFragment);
+        title.setText(examen.getName());
+
         if(examen.getImageId() != 0){
             ImageView image = (ImageView)view.findViewById(R.id.imageviewExamenFragment);
             image.setImageResource(examen.getImageId());
