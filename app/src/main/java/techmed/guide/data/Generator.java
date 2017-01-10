@@ -54,16 +54,14 @@ public class Generator {
 
     public static final List<Examen> listExamensCerveau(){
         ArrayList<Examen> items = new ArrayList<>();
-        items.add(new Examen("Histologie et examen post-mortem", ""));
-        items.add(new Examen("IRM anatomique", ""));
-        items.add(new Examen("CT-scan", ""));
-        items.add(new Examen("Tomographie à émission mono-photonique", ""));
-        items.add(new Examen("Voxel-based morphometry", ""));
+        items.add(new Examen("IRM du cerveau", "Permet de visualiser la partie superficielle, la partie profonde les ventricules et la vascularisation veineuse et artérielle"));
+        items.add(new Examen("Tomodensitométrie", "Utilisée dans un contexte de traumatologie (recherche d'hématome sous-dural/extra-dural), d'hémorragie sous-arachnoïdienne ou intra-parenchymateuse"));
+        items.add(new Examen("Tomographie à émission mono-photonique", "Repérer des régions du cerveau qui seraient atteintes par une quelconque pathologie, notamment l'épilepsie"));
+        items.add(new Examen("Voxel-based morphometry", "Permet d'avoir un aperçu du fonctionnement du cerveau"));
         items.add(new Examen("Imagerie par résonance magnétique fonctionnelle", "Obtenir le taux d'oxygénation du sang dans le cerveau"));
         items.add(new Examen("Tomographie par émission de positrons", "Mesurer les modifications du débit sanguin"));
         items.add(new Examen("Imagerie optique", ""));
-        items.add(new Examen("Imagerie spectroscopique proche infrarouge", ""));
-        items.add(new Examen("Mesure du signal optique évoqué ", ""));
+        items.add(new Examen("Imagerie spectroscopique proche infrarouge", "Evaluer l’absorption de la lumière de la peau et, plus pertinemment, de la surface du cerveau"));
 
         return items;
     }
