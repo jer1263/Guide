@@ -8,6 +8,16 @@ import java.io.Serializable;
 
 public class Examen implements Serializable, Comparable<Examen> {
     private String name;
+    private String subtitle;
+
+    public String getSubtitle() {
+        return subtitle;
+    }
+
+    public void setSubtitle(String subtitle) {
+        this.subtitle = subtitle;
+    }
+
     private String description;
     private int imageId;
 
@@ -35,15 +45,17 @@ public class Examen implements Serializable, Comparable<Examen> {
         this.name = name;
     }
 
-    public Examen(String name, String description) {
+    public Examen(String name, String subtitle, String description) {
         this.name = name;
+        this.subtitle = subtitle;
         this.description = description;
         this.imageId = 0;
     }
 
-    public Examen(String name, int resId, String description) {
+    public Examen(String name, int resId, String subtitle, String description) {
         this.name = name;
         this.imageId = resId;
+        this.subtitle = subtitle;
         this.description = description;
     }
 
