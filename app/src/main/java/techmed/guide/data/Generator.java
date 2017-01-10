@@ -43,14 +43,20 @@ public class Generator {
 
     public static final List<Examen> listExamensCoeur(){
         ArrayList<Examen> items = new ArrayList<>();
-        items.add(new Examen("Arteriographie",R.drawable.arteriographie_aorte ,"Visualiser les arteres",""));
-        items.add(new Examen("Coronarographie", R.drawable.coronarographie_normale,"Visualiser les arteres coronaires et les vaisseaux irriguant le coeur",""));
+        items.add(new Examen("Arteriographie", "Visualiser les arteres", "L’artériographie permet d’obtenir des images des artères et de leurs ramifications ainsi que du territoire qu’elles irriguent. L’examen peut ainsi mettre en évidence l’obstruction d’une artère, le nombre d’artères obstruées ou encore la sévérité de ces obstructions. Par exemple, l’artériographie d’un organe permet de caractériser sa vascularisation et la présence de lésions artérielles (rétrécissement, occlusions, malformations, ruptures à l’origine d’hémorragies, etc.)."));
+        items.add(new Examen("Coronarographie", "Visualiser les arteres coronaires et les vaisseaux irriguant le coeur", "La coronarographie est une luminographie qui permet de voir les artères coronaires en 2D. Elle se fait selon différentes incidences qui permettent de dégager toutes les branches des artères coronaires. En général, entre 5 et 8 incidences pour la coronaire gauche et entre 3 et 4 pour la coronaire droite suffisent à explorer les 2 réseaux et établir un diagnostic. Le bilan coronarographique d'un patient ponté nécessite l'utilisation de cathéters différents pour rechercher les pontages veineux ou artériels. Il est indispensable de connaître le nombre et le type de pontage (double/triple pontage, VSI/artériel)"));
         items.add(new Examen("Echocardiographie", "Visualiser les tissus et la cinétique",""));
-        items.add(new Examen("Scanner coronaire", R.drawable.scanner_coronnaire1, "Visualiser les artères coronaires",""));
-        items.add(new Examen("Echographie-Doppler des artères", "Visualiser les tissus et la cinétique",""));
-        items.add(new Examen("Echographie transoesophagienne", "Visualiser parfaitement l’ensemble des tissus qui constituent le cœur",""));
-        items.add(new Examen("Echographie-Doppler des veines", "Analyser la structure des veines et le flux sanguin",""));
-        items.add(new Examen("Scintigraphie cardiaque", "Evaluer la fonction du muscle cardiaque, donne des renseignements sur ses capacités de contraction",""));
+        items.add(new Examen("Scanner coronaire", R.drawable.scanner_coronnaire1, "Visualiser les artères coronaires", "Le coroscanner ou coronaroscanner est une coronarographie virtuelle.\n" +
+                "Après injection intra-veineuse de produit de contraste, l’acquisition des images couplée à un ECG dure moins de 10 secondes.\n" +
+                "La simplicité de l’examen permet un dépistage facilement accessible, notamment en cas de douleurs thoraciques atypiques, de dyspnée et chez les patients présentant des facteurs de risque personnels ou familiaux.\n" +
+                "\n" +
+                "Ces principales indications sont : les sténoses ou occlusion des coronaires (tronc commun), un bilan ischémique du myocarde, la surveillance de stents, la surveillance de pontages aorto-coronariens, un bilan de cardiomyopathie, un bilan de valvulopathie.\n" +
+                "Dans le bilan des cardiopathies ischémiques, le scanner cardiaque est, actuellement, la technique non invasive, la plus performante pour l’exploration des artères coronaires. Par son acquisition volumique, le scanner s’affirme comme le moyen d’explorer en ambulatoire de façon reproductible non seulement les artères coronaires mais aussi toutes les structures cardiaques. Le scanner cardiaque est entrain de devenir un examen de routine qui trouve progressivement sa place parmi les différentes explorations cardiaques.   \n" +
+                "\n"));
+        items.add(new Examen("Echographie-Doppler des artères", "Visualiser les tissus et la cinétique", ""));
+        items.add(new Examen("chographie transoesophagienne", "Visualiser parfaitement l’ensemble des tissus qui constituent le cœur", ""));
+        items.add(new Examen("Echographie-Doppler des veines", "Analyser la structure des veines et le flux sanguin", ""));
+        items.add(new Examen("Scintigraphie cardiaque", "Evaluer la fonction du muscle cardiaque, donne des renseignements sur ses capacités de contraction", ""));
         return items;
     }
 
