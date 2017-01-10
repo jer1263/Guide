@@ -43,14 +43,14 @@ public class Generator {
 
     public static final List<Examen> listExamensCoeur(){
         ArrayList<Examen> items = new ArrayList<>();
-        items.add(new Examen("Arteriographie",R.drawable.arteriographie_aorte ,"Visualiser les arteres"));
-        items.add(new Examen("Coronarographie", R.drawable.coronarographie_normale,"Visualiser les arteres coronaires et les vaisseaux irriguant le coeur"));
-        items.add(new Examen("Echocardiographie", "Visualiser les tissus et la cinétique"));
-        items.add(new Examen("Scanner coronaire", R.drawable.scanner_coronnaire1, "Visualiser les artères coronaires"));
-        items.add(new Examen("Echographie-Doppler des artères", "Visualiser les tissus et la cinétique"));
-        items.add(new Examen("Echographie transoesophagienne", "Visualiser parfaitement l’ensemble des tissus qui constituent le cœur"));
-        items.add(new Examen("Echographie-Doppler des veines", "Analyser la structure des veines et le flux sanguin"));
-        items.add(new Examen("Scintigraphie cardiaque", "Evaluer la fonction du muscle cardiaque, donne des renseignements sur ses capacités de contraction"));
+        items.add(new Examen("Arteriographie",R.drawable.arteriographie_aorte ,"Visualiser les arteres",""));
+        items.add(new Examen("Coronarographie", R.drawable.coronarographie_normale,"Visualiser les arteres coronaires et les vaisseaux irriguant le coeur",""));
+        items.add(new Examen("Echocardiographie", "Visualiser les tissus et la cinétique",""));
+        items.add(new Examen("Scanner coronaire", R.drawable.scanner_coronnaire1, "Visualiser les artères coronaires",""));
+        items.add(new Examen("Echographie-Doppler des artères", "Visualiser les tissus et la cinétique",""));
+        items.add(new Examen("Echographie transoesophagienne", "Visualiser parfaitement l’ensemble des tissus qui constituent le cœur",""));
+        items.add(new Examen("Echographie-Doppler des veines", "Analyser la structure des veines et le flux sanguin",""));
+        items.add(new Examen("Scintigraphie cardiaque", "Evaluer la fonction du muscle cardiaque, donne des renseignements sur ses capacités de contraction",""));
         return items;
     }
 
@@ -64,10 +64,10 @@ public class Generator {
 
     public static final List<Examen> listExamensCerveau(){
         ArrayList<Examen> items = new ArrayList<>();
-        items.add(new Examen("IRM du cerveau", R.drawable.irm_cerveau,"Permet de visualiser la partie superficielle, la partie profonde les ventricules et la vascularisation veineuse et artérielle"));
-        items.add(new Examen("Tomodensitométrie", R.drawable.tomodensitometrie_cerveau,"Utilisée dans un contexte de traumatologie (recherche d'hématome sous-dural/extra-dural), d'hémorragie sous-arachnoïdienne ou intra-parenchymateuse"));
-        items.add(new Examen("Imagerie par résonance magnétique fonctionnelle(IRMf)", R.drawable.IRMf_cerveau,"Obtenir le taux d'oxygénation du sang dans le cerveau"));
-        items.add(new Examen("Tomographie par émission de positrons(TEP)", R.drawable.TEP_cerveau,"Mesurer les modifications du débit sanguin"));
+        items.add(new Examen("IRM du cerveau", R.drawable.irm_cerveau,"Permet de visualiser la partie superficielle, la partie profonde les ventricules et la vascularisation veineuse et artérielle",""));
+        items.add(new Examen("Tomodensitométrie", R.drawable.tomodensitometrie_cerveau,"Utilisée dans un contexte de traumatologie (recherche d'hématome sous-dural/extra-dural), d'hémorragie sous-arachnoïdienne ou intra-parenchymateuse",""));
+        items.add(new Examen("Imagerie par résonance magnétique fonctionnelle(IRMf)", R.drawable.IRMf_cerveau,"Obtenir le taux d'oxygénation du sang dans le cerveau",""));
+        items.add(new Examen("Tomographie par émission de positrons(TEP)", R.drawable.TEP_cerveau,"Mesurer les modifications du débit sanguin",""));
         return items;
     }
 
