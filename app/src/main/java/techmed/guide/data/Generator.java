@@ -70,7 +70,7 @@ public class Generator {
                 "L'écho-Doppler veineux permet en temps réel de visualiser les veines ainsi que les flux sanguins qui les parcourent. Il se pratique essentiellement aux membres inférieurs, sur les trajets veineux des mollets, des cuisses et de l’aine, en remontant parfois même jusqu’à l’abdomen (pour explorer les veines iliaques et la veine cave inférieure).\n" +
                 "Plus rarement, ce sont les veines du membre supérieur qui sont explorées, par exemple en cas de suspicion de thrombose veineuse du bras."));
 
-        items.add(new Examen("Scintigraphie cardiaque", "Evaluer la fonction du muscle cardiaque, donne des renseignements sur ses capacités de contraction", "Le but de cet examen est d’évaluer la vascularisation régionale du muscle cardiaque à l’effort et le plus souvent au repos. \n" +
+        items.add(new Examen("Scintigraphie cardiaque", R.drawable.scintigraphie,"Evaluer la fonction du muscle cardiaque, donne des renseignements sur ses capacités de contraction", "Le but de cet examen est d’évaluer la vascularisation régionale du muscle cardiaque à l’effort et le plus souvent au repos. \n" +
                 "Cet examen permet de déterminer une lésion du muscle cardiaque (infarctus du myocarde) ou un flux sanguin insuffisant au cours de l’effort (ischémie myocardique). \n" +
                 "Ce test est prescrit par votre cardiologue, compte tenu de vos antécédents, de vos facteurs de risque vasculaire ou de votre symptomatologie."));
 
@@ -79,9 +79,14 @@ public class Generator {
 
     public static final List<Examen> listExamensFoie(){
         ArrayList<Examen> items = new ArrayList<>();
-        items.add(new Examen("Echographie",R.drawable.echographie_abdominale ,"Analyser l'ensemble de l'abdomen", ""));
-        items.add(new Examen("Tomodensitometrie",R.drawable.tomodensitometrie_foie ,"Mesurer l'absorption des rayons X par les tissus pour reconstruire des images 2D ou 3D", ""));
-        items.add(new Examen("IRM",R.drawable.irm_foie ,"Discriminer les differents tissus mous et obtenir un maximum de détails sur l'abdomen", ""));
+        items.add(new Examen("Echographie",R.drawable.echographie_abdominale ,"Analyser l'ensemble de l'abdomen", "L'échographie abdominale utilise les ultrasons émis par une sonde, réfléchis par les organes en fonction de leur densité et récupérés par un récepteur situé également dans la sonde.\n"+
+                "L'échographie abdominale fournit de nombreux renseignements, bien plus riches que la radiographie standard, sur les organes abdominaux.\n"+
+                "Pour le foie elle permet de renseigner : taille et homogénéité (cirrhose, stéatose), kystes, abcès, tumeurs, métastases de cancers non hépatiques"));
+        items.add(new Examen("Tomodensitometrie",R.drawable.tomodensitometrie_foie ,"Mesurer l'absorption des rayons X par les tissus pour reconstruire des images 2D ou 3D", "La tomodensitométrie permet de mesurer l'absorption des rayons X par les tissus. Avec ces mesures il est possible de recreer en 2D ou 3D des images du foie.\n"+
+                "L'examen peut nécessiter une injection intraveineuse d'un produit de contraste iodé.\n"+
+                "Comme pour toute radiographie, l'exposition répétée aux rayons X peut être nocive pour l'organisme, mais le rapport bénéfice/risque lié à l'irradiation penche largement en faveur de la tomodensitométrie, lorsque la demande d'examen est justifiée, ce qui en fait une technique d'imagerie médicale de plus en plus pratiquée"));
+        items.add(new Examen("IRM Hépatique",R.drawable.irm_foie ,"Discriminer les differents tissus mous et obtenir un maximum de détails sur l'abdomen", "L'IRM est devenue un examen de référence dans l'exploration de la pathologie hépatique. La qualité d'image s'est améliorée grâce aux hypergradients et aux séquences d' imagerie rapide et ultra-rapide, qui permettent une exploration en apnée et une étude dynamique après injection de produit de contraste. L'IRM est donc concurrentielle de la tomodensitometrie, en complément de l'échographie, dans l'étude des lésions parenchymateuses hépatiques, des structures canalaires hépatobiliaires et des structures vasculaires hépatiques.\n"+
+                "Grâce aux différentes séquences, on peut observer les tissus mous avec des contrastes plus élevés qu'avec la tomodensitométrie"));
         return items;
     }
 
